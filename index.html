@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+
+    <title>Portfolio</title>
+</head>
+<style>
+    *{
+        padding: 0px;
+        margin: 0px;
+    }
+    body{
+        background-color:#000000;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    nav{
+        width: 100%;
+        height: 7vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #logo{
+        background-image: url(img/logo\ \(1\).png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 3%;
+        height: 50%;
+        margin: 2%;
+    }
+    #logo:hover{
+        cursor: pointer;
+    }
+    #links{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        color: white;
+        width: 30%;
+        height: 40%;
+        font-family: 'Source Code Pro', monospace;
+    }
+    #links > *{
+        padding: 2%;
+        text-decoration: none;
+        color: grey;
+        font-size: 20px;
+    }
+    #links > *:hover{
+        text-decoration: underline;
+        
+    }
+    #container{
+        display: flex;
+        flex-direction: column;
+        width: 100vh;
+        height: 70vh;
+        margin: auto;
+        margin-top: 8%;
+        margin-left: 30%;
+        
+    }
+    #hi{
+        color: #ff91a4;
+        width: 167px;
+        font-family: 'Source Code Pro', monospace;
+        overflow: hidden;
+        border-right: .15em solid orange;
+        white-space: nowrap;
+        font-size: 16px;
+        letter-spacing: .15em;
+        animation: 
+            typing 1s steps(14, end),
+            blink-caret .75s step-end infinite;
+    }
+    @keyframes typing {
+  from { width: 0 }
+  to { width: 124px }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+    #name{
+        color: rgb(204, 204, 204);
+        font-size: 700%;
+        font-weight: 700;
+    }
+    #name2{
+        color: rgb(107, 107, 107);
+        font-size: 700%;
+        font-weight: 700;
+    }
+    #intro{
+        color: grey;
+        max-width: 60%;
+        margin-top:2%;
+    }
+
+    #blue{
+        background-color:#09182e;
+        max-width: 20%;
+        height: 5%;
+        border-radius: 5px;
+        border-color:#ff91a4;
+        color: #ff91a4;
+        margin-top: 3%;
+        font-family: 'Rubik', sans-serif;
+        font-weight: 600;
+        
+    }
+    #blue:hover{
+        background-color: #ff91a4;
+        color: black;
+        border-color: #09182e;
+        cursor: pointer;
+    }
+    a{
+        text-decoration: none;
+        color: #ff91a4;
+    }
+</style>
+<body>
+    <nav id="nav">
+        <div id="logo" onClick="location.href='index.html'"></div>
+        <div id="links">
+            <a id="about" href="aboutMe.html"><span style="color: #ff91a4;">01.</span> About</a>
+            <a id="resume" href="https://xgavity.github.io/resume2.github.io/"><span style="color: #ff91a4;">02.</span> Resume</a>
+            <a id="contact" href="https://github.com/Xgavity?tab=repositories"><span style="color: #ff91a4;">03.</span> Github</a>
+        </div>
+    </nav>
+    <div id="container">
+        <div id="hi">Hi, my name is</div>
+        <div id="name">Aaron Romero</div>
+        <div id="name2">I do things</div>
+        <div id="intro"><p>Some people might say that my skills in "things" are unparalleled, and I tend to agree. I can handle all sorts of things, and I always seem to know just what to do, no matter the task im your man. When it comes to things, you can count on me to get the job done right. All in all, I'm pretty confident in my ability to handle any thing that comes my way.</p></div>
+        <button id="blue"><a href="projects2.html">Check out my Projects</a></button>
+    </div>
+</body>
+</html>

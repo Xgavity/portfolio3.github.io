@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0px;
+        margin: 0px;
+    }
+    body{
+        background-color:#000000;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    nav{
+        width: 100%;
+        height: 7vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 5vh;
+    }
+    #logo{
+        background-image: url("img/logo\ \(1\).png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 3%;
+        height: 50%;
+        margin: 2%;
+    }
+    #logo:hover{
+        cursor: pointer;
+    }
+    #links{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        color: white;
+        width: 30%;
+        height: 40%;
+        font-family: 'Source Code Pro', monospace;
+    }
+    #links > *{
+        padding: 2%;
+        text-decoration: none;
+        color: grey;
+        font-size: 20px;
+    }
+    #links > *:hover{
+        text-decoration: underline;
+        
+    }
+    body{
+        background-color: black;
+    }
+    .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.item {
+  background-color:black;
+  
+  min-width: 5vh;
+  min-height: 20vh;
+  color: white;
+}
+
+.big {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+
+.small {
+  grid-row: span 2;
+  grid-column: span 1;
+}
+.item-19{
+  grid-column: span 3;
+}
+
+/* .item:nth-child(4n + 1),
+.item:nth-child(4n + 2),
+.item:nth-child(4n + 3) {
+  margin-right: 10px;
+}
+
+.item:nth-child(4n) {
+  margin-right: 0;
+} */
+
+.big-title{
+  font-size: 30px;
+}
+.item{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  border: #ff91a4 solid 2px;
+}
+.item:hover{
+    cursor: pointer;
+    /* filter: drop-shadow(0 5px 0 #ff91a4); */
+}
+a{
+    text-decoration: none;
+    
+}
+.item-text{
+display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  background-color:black;
+  padding: 20px;
+  min-width: 5vh;
+  min-height: 20vh;
+  color: white;
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-100%, -50%); */
+  z-index: 2;
+  transition: opacity 0.5s ease-in-out;
+  text-align: left;
+}
+
+.item:hover .item-text {
+  opacity: 0;
+}
+
+.item:hover .item-overlay {
+  opacity: 1;
+}
+
+.item-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
+
+.item-1{
+    background-image: url("img/Screenshot\ 2023-05-11\ 170823.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.item-4{
+    background-image: url("img/randomnumbergame.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.item-5{
+    background-image: url("img/bootstap.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 95%;
+}
+
+.item-2{
+    background-image: url("img/astaResponsive.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.item-8{
+    background-image: url("img/UCF.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.item-3{
+    background-image: url("img/quizaap.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.item-6{
+    background-image: url("img/cal.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.item-8{
+    background-image: url("img/sansbattle.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.item-9{
+    background-image: url("img/bettercallsaul.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.item-12{
+    background-image: url("img/amounguspage.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: span 3;
+}
+
+.item-19{
+    background-image: url("img/BCSform.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.item-7{
+    background-image: url("img/firstPortfolio.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.item-10{
+    background-image: url("img/firstResume.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.item-11{
+    
+    background-image: url("https://avatars.githubusercontent.com/u/129911377?v=4&s=460");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#intro{
+        display: flex;
+        flex-direction: column;
+        width: 100vh;
+        margin: 0 auto;
+        margin-bottom: 5%;
+}
+
+#title{
+        color: rgb(204, 204, 204);
+        font-size: 700%;
+        font-weight: 700;
+}
+
+#sub{
+        color: grey;
+        max-width: 80%;
+        margin-top:2%;
+}
+
+
+
+
+</style>
+<body>
+
+    <nav id="nav">
+        <div id="logo" onClick="location.href='index.html'"></div>
+
+        </div>
+        <div id="links">
+            <a id="about" href="aboutMe.html"><span style="color: #ff91a4;">01.</span> About</a>
+            <a id="resume" href="https://xgavity.github.io/resume2.github.io/"><span style="color: #ff91a4;">02.</span> Resume</a>
+            <a id="contact" href="https://github.com/Xgavity?tab=repositories"><span style="color: #ff91a4;">03.</span> Contact</a>
+        </div>
+    </nav>
+
+
+    <div id="intro">
+        <div id="title">Projects</div>
+        <div id="sub">Welcome to my web development projects page. Here, you'll find a showcase of my passion 
+            and expertise in creating dynamic and visually appealing websites. Through meticulous planning, 
+            innovative design, and meticulous coding, I have brought numerous ideas to life, crafting seamless 
+            user experiences and robust functionality. Each project represents a unique challenge that I eagerly 
+            embraced</div>
+    </div>
+
+
+    <div class="container">
+        
+            <div class="item big item-1" onClick="location.href='https://xgavity.github.io/chatUI.github.io/'">
+                <div class="item-overlay"></div>
+                <div class="item-text">
+                    <div class="small-title">Html/CSS</div>
+                        <div>
+                            <div class="big-title">Chat/UI</div>
+                            <div class="discription">The development of a chat user interface (UI) is a captivating journey that merges functionality and aesthetics seamlessly. It involves creating an intuitive design that facilitates smooth communication and enhances the user experience. </div>
+                        </div>
+                </div>
+        </div>
+
+        <div class="item small item-2" onClick="location.href='https://xgavity.github.io/responsive.github.io/'">
+            <div class="item-overlay"></div>
+            <div class="item-text">
+                <div class="small-title">HTML/CSS</div>
+                <div>
+                    <div class="big-title">Responsive Page</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item small item-3" onClick="location.href='https://xgavity.github.io/quizApp.github.io/'">
+            <div class="item-text">
+                <div class="small-title">HTML/JavaScript</div>
+                <div>
+                    <div class="big-title">Quiz App</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item big item-4" onClick="location.href='https://xgavity.github.io/randomnumgame.github.io/'">
+            <div class="item-text">
+                <div class="small-title">Html/CSS/Javascript</div>
+                    <div>
+                        <div class="big-title">Random Number Game</div>
+                        <div class="discription">The development of a random number game is a thrilling adventure that blends logic and excitement into a captivating experience. Starting with a simple concept of generating random numbers, the game evolves through careful coding and design choices. </div>
+                    </div>
+            </div>
+        </div>
+
+        <div class="item big item-5" onClick="location.href='https://xgavity.github.io/bootstrap.github.io/'">
+            <div class="item-text">
+                <div class="small-title">HTML/CSS/Bootstrap</div>
+                    <div>
+                        <div class="big-title">BootStrap Website</div>
+                        <div class="discription">The development of a Bootstrap ecommerce website is an exciting endeavor that combines the power of Bootstrap's responsive framework with the functionalities required for a successful online store. </div>
+                    </div>
+            </div>
+        </div>
+
+        <div class="item small item-6" onClick="location.href='https://xgavity.github.io/calculator.github.io/'">
+            <div class="item-text">
+                <div class="small-title">HTML/CSS</div>
+                <div>
+                    <div class="big-title">Calculator</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item small item-7" onClick="location.href='https://xgavity.github.io/firstPortfolio.github.io/'">
+            <div class="item-text">
+                <div class="small-title">HTML/CSS</div>
+                <div>
+                    <div class="big-title">First Portfolio</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item big item-8" onClick="location.href='https://xgavity.github.io/sansFight.github.io/'">
+            <div class="item-text">
+                <div class="small-title">Html/CSS</div>
+                    <div>
+                        <div class="big-title">Sans Battle</div>
+                        <div class="discription">The development of a JavaScript game is an exhilarating process that combines coding expertise with creative imagination. From conceptualizing game mechanics to implementing interactive elements, every step is aimed at crafting an engaging experience. </div>
+                    </div>
+            </div>
+        </div>
+
+        <div class="item big item-9" onClick="location.href='https://xgavity.github.io/BCSgallery.github.io/'">
+            <div class="item-text">
+                <div class="small-title">Html/CSS</div>
+                    <div>
+                        <div class="big-title">BCS Photo Gallary</div>
+                        <div class="discription">The development of a photo gallery is a delightful journey that combines the beauty of visuals with the power of code. Starting with a concept, developers carefully design an intuitive and visually appealing interface that showcases a collection of images.</div>
+                    </div>
+            </div>
+        </div>
+
+        <div class="item small item-10" onClick="location.href='https://xgavity.github.io/resume.github.io/'">
+            <div class="item-text">
+                <div class="small-title">HTML/CSS</div>
+                <div>
+                    <div class="big-title">First Resume</div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="item big item-12" onClick="location.href='https://xgavity.github.io/Amongus.github.io/'">
+            <div class="item-text">
+                <div class="small-title">Html/CSS</div>
+                    <div>
+                        <div class="big-title">Among Us Page</div>
+                        <div class="discription">The development of a website dedicated to my favorite game, Among Us, is a passion project that merges my love for gaming and web design. Through meticulous planning and creative implementation, I aim to capture the essence of the game and provide a platform for fellow fans to connect and engage.</div>
+                    </div>
+            </div>
+        </div>
+
+        
+        
+        <div class="item small item-19" onClick="location.href='https://xgavity.github.io/BCSFORM.github.io/'">
+            <div class="item-text">
+                <div class="small-title">HTML/CSS/Javascript</div>
+                <div>
+                    <div class="big-title">BCS Form</div>
+                    <div class="discription">The development of a form using CSS and JavaScript is an engaging process that combines design aesthetics with interactive functionality. With CSS, I craft a visually appealing layout, styling each element to ensure a cohesive and pleasing user interface.</div>
+                </div>
+            </div>
+        </div>
+      </div>
+      
+      
+</body>
+</html>
